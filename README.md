@@ -1,24 +1,11 @@
-# README
+# 在庫管理システムを開発する！
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これはポートフォリオ作成の在庫管理アプリケーションです。
 
-Things you may want to cover:
+## 開発環境
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* WSL2
+* Ubuntu
+* Ruby
+* Rails
+* Git
