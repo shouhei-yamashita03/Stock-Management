@@ -1,6 +1,12 @@
 <% provide(:title, "Top") %>
-<div class="center jumbotron">
+<div class="container">
   <h1>在庫管理システム</h1>
-  <p>このアプリケーションでは、登録されたユーザーの勤怠情報を閲覧・登録・編集することができます。</p>
-  <%= link_to "ユーザー登録", signup_path, class: "btn btn-lg btn-primary" %>
+  <div class="text-center">
+    <div class="btn-group-vertical">
+      <%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %><br>
+      <%= link_to "LINEログイン" , "#", class: "btn btn-lg btn-success" %><br>
+      <%= link_to "Googleログイン" , "#", class: "btn btn-lg btn-danger" %><br>
+      <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-info" %>
+    </div>
+  </div>
 </div>

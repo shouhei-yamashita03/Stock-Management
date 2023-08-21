@@ -1,1 +1,13 @@
 <% provide(:title, @user.name) %>
+
+<div class="container">
+<h1>メニュー一覧</h1>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <%= link_to "在庫一覧", "#", class: "btn btn-lg btn-primary btn-block" %><br>
+            <%= link_to "在庫検索" , "#", class: "btn btn-lg btn-success btn-block" %><br>
+            <%= link_to "倉庫配置表" , "#", class: "btn btn-lg btn-warning btn-block" %><br>
+            <%= link_to "マイページ", "#", class: "btn btn-lg btn-info btn-block" %>
+        </div>
+    </div>
+</div>
