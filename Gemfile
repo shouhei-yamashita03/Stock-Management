@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails',        '~> 5.1.6'
 gem 'rails-i18n'
+gem 'roo'
+gem 'activerecord-import'
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'puma',         '~> 3.7'

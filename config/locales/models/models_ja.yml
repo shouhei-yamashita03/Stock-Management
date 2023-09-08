@@ -11,3 +11,9 @@ ja:
           password_confirmation: パスワード再入力
           created_at: 作成日
           updated_at: 更新日
+        stock:
+          id: ID
+          category_name: カテゴリー名
+          stock_name: 在庫名
+          stock_description: 在庫の説明
+          quantity: 数量

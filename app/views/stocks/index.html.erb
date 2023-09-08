@@ -1,0 +1,30 @@
+<% provide(:title, "Stock_list") %>
+<h1>在庫一覧</h1>
+
+<div class="container">
+    <%= form_with url:import_user_stocks_path do |f| %>
+    <%= f.label :在庫 %>
+    <%= f.file_field :file, accept: '.csv' %>
+    <%= f.submit "登録", class: "btn btn-primary csv-button" %>
+    <% end %>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>カテゴリー名</th>
+                <th>在庫名</th>
+                <th>数量</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @stocks.each do |stock| %>
+                <tr>
+                    <td></td>
+                    <td><%= stock.category_name %></td>
+                    <td><%= stock.stock_name %></td>
+                    <td><%= stock.quantity %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
