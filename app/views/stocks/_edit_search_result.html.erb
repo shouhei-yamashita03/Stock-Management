@@ -1,0 +1,49 @@
+<% provide(:class_text, 'search-result') %>
+<% provide(:button_text, '更新') %>
+
+<div class="modal-dialog modal-lg modal-dialog-center">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <h1 class="modal-title">検索結果編集</h1>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= form_with(model: @stock, url: update_search_result_user_stock_path(user_id: @user.id, id: @stock.id), local: true, method: :patch) do |f| %>
+            <%#= render 'shared/stock_error_messages', object: @stock %>
+
+            <%= f.label :display_number, class: "label-#{yield(:class_text)}" %>
+            <%= f.text_field :display_number, class: "form-control" %>
+            
+            <%#= f.label :image, class: "label-#{yield(:class_text)}" %>
+            <%#= f.file_field :image, class: "form-control" %>
+
+            <%= f.label :category_name, class: "label-#{yield(:class_text)}" %>
+            <%= f.text_field :category_name, class: "form-control" %>
+
+            <%= f.label :stock_name, class: "label-#{yield(:class_text)}" %>
+            <%= f.text_field :stock_name, class: "form-control" %>
+
+            <%= f.label :stock_description, class: "label-#{yield(:class_text)}" %>
+            <%= f.text_area :stock_description, class: "form-control" %>
+
+            <%= f.label :price, class: "label-#{yield(:class_text)}" %>
+            <%= f.number_field :price, class: "form-control" %>
+
+            <%= f.label :quantity, class: "label-#{yield(:class_text)}" %>
+            <%= f.number_field :quantity, class: "form-control" %>
+            <div class="center">
+              <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
+              <button type="button" class="btn btn-default btn-<%= yield(:class_text) %>" data-dismiss="modal">
+                キャンセル
+              </button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

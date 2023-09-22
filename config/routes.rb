@@ -10,6 +10,16 @@ Rails.application.routes.draw do
   resources :users do
   resources :stocks do
     collection { post :import }
+    member do
+      get 'stock_search'
+      get 'search_result'
+      get 'stock_detail'
+      get 'edit_search_result'
+      patch 'update_search_result'
+      get 'edit_stock_detail'
+      patch 'update_stock_detail'
+      delete 'stock_details/:id', to: 'stocks#destroy_stock_detail', as: 'destroy_stock_detail'
+    end
     end
   end
 end

@@ -13,7 +13,9 @@ ja:
           updated_at: 更新日
         stock:
           id: ID
+          display_number: 陳列番号
           category_name: カテゴリー名
           stock_name: 在庫名
           stock_description: 在庫の説明
+          price: 価格
           quantity: 数量

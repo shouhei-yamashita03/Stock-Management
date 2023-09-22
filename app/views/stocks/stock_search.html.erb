@@ -1,0 +1,16 @@
+<% provide(:title, "Stock_search") %>
+<div class="container">
+<h1><strong>在庫検索</strong></h1>
+<%= search_form_for @q, url: search_result_user_stock_path do |f| %>
+
+<div class="form-group" style="width: 100;">
+    <%= f.label :stock_name_cont, '在庫名を入力してください' %>
+    <%= f.search_field :stock_name_cont, placeholder: '在庫名', id: 'stock_name-form', class: "form-control mr-3" %>
+</div>
+<br>
+<div class="search-actions">
+    <%= f.submit '検索', class: 'btn btn-primary' %>
+</div>
+<% end %>
+
+</div>

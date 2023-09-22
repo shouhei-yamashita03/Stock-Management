@@ -5,8 +5,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "トップ", root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "在庫一覧", user_stocks_path(@user) %></li>
-          <li><%= link_to "在庫検索", "#" %></li>
+          <li><%= link_to "在庫一覧", user_stocks_path(current_user) %></li>
+          <li><%= link_to "在庫検索", stock_search_user_stock_path(user_id: current_user.id, id: 1) %></li>
           <li><%= link_to "倉庫配置表", "#" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
