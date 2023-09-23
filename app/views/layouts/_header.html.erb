@@ -7,7 +7,7 @@
         <% if logged_in? %>
           <li><%= link_to "在庫一覧", user_stocks_path(current_user) %></li>
           <li><%= link_to "在庫検索", stock_search_user_stock_path(user_id: current_user.id, id: 1) %></li>
-          <li><%= link_to "倉庫配置表", "#" %></li>
+          <li><%= link_to "倉庫配置表", warehouse_arrangement_user_stock_path(current_user, id: 1) %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               マイページ <b class="caret"></b>

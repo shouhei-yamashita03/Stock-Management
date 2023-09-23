@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       get 'edit_stock_detail'
       patch 'update_stock_detail'
       delete 'stock_details/:id', to: 'stocks#destroy_stock_detail', as: 'destroy_stock_detail'
+      get 'warehouse_arrangement'
     end
     end
   end

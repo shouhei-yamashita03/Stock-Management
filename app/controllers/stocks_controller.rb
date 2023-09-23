@@ -114,6 +114,12 @@ class StocksController < ApplicationController
     redirect_to search_result_user_stock_url(@stock)
   end
 
+  # 倉庫配置表
+  def warehouse_arrangement
+    @user = current_user
+    #@stocks = @user.stocks
+  end
+
   private
 
   def stock_params
